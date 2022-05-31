@@ -40,6 +40,10 @@ class QuestionResource extends Resource
                                     ->schema([
                                         RichEditor::make('reply')
                                             ->disableAllToolbarButtons(),
+                                        // TODO Problem
+                                        DateTimePicker::make('created_at')
+                                            ->columnSpan(3)
+                                            ->default(now()),
                                     ])
                                     ->createItemButtonLabel('Add a reply')
                             ])
